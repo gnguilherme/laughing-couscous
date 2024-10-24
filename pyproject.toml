@@ -1,0 +1,7 @@
+[project]
+name = "laughing-couscous"
+version = "0.1.0"
+description = "A couscous that likes to laugh and work with [ML/Air]Flow"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = []
