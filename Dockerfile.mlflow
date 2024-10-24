@@ -5,4 +5,4 @@ COPY ./pyproject.toml ./uv.lock ./README.md /app/
 WORKDIR /app
 RUN uv sync --frozen --extra mlflow
 
-CMD ["uv", "run", "mlflow", "ui", "--host", "0.0.0.0", "--port", "5000"]
+ENTRYPOINT ["uv", "run"]
