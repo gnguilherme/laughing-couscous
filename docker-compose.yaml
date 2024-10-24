@@ -8,3 +8,14 @@ services:
     volumes:
       - ./mlruns:/mlflow/mlruns
     command: mlflow ui --host 0.0.0.0 --port 5000
+  airflow:
+    build:
+      context: .
+      dockerfile: Dockerfile.airflow
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./dags:/usr/local/airflow/dags
+      - ./logs:/usr/local/airflow/logs
+      - ./plugins:/usr/local/airflow/plugins
+    command: -p 8080
