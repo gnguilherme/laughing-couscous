@@ -2,7 +2,6 @@
 
 from numpy import ndarray
 from pandas import DataFrame
-from sklearn.tree import DecisionTreeClassifier
 
 
 def predict(X: DataFrame) -> ndarray:
@@ -14,5 +13,5 @@ def predict(X: DataFrame) -> ndarray:
     Returns:
         ndarray: The model predictions.
     """
-    model = DecisionTreeClassifier()  # this should be loaded from mlflow
-    return model.predict(X)
+
+    return model.predict(X)  # should be replaced with the actual model

@@ -1,7 +1,7 @@
 """Train a DecisionTreeClassifier model."""
 
 from numpy import ndarray
-from sklearn.model_selection import HalvingRandomSearchCV
+from sklearn.model_selection import RandomizedSearchCV
 from sklearn.tree import DecisionTreeClassifier
 
 
@@ -23,7 +23,7 @@ def train(X_train: ndarray, X_test: ndarray, y_train: ndarray, y_test: ndarray) 
         "min_samples_leaf": [1, 2, 3, 4, 5],
         "splitter": ["best", "random"],
     }
-    search = HalvingRandomSearchCV(model, param_distributions, n_iter=10)
+    search = RandomizedSearchCV(model, param_distributions, n_iter=10)
     search.fit(X_train, y_train)
 
     score = search.score(X_test, y_test)
