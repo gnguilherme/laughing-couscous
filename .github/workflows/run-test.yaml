@@ -16,3 +16,8 @@ jobs:
 
       - name: Run tests
         run: uv run pytest
+  laugh:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Laughing
+        run: echo "hehehehelp kkkkcry"
