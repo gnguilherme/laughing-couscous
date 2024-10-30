@@ -2,11 +2,11 @@
 
 from unittest.mock import patch
 
-from src.modeling.load_data import load_data
+from laughing_couscous.modeling.load_data import load_data
 
 
-@patch("src.modeling.load_data.load_iris")
-@patch("src.modeling.load_data.train_test_split")
+@patch("laughing_couscous.modeling.load_data.load_iris")
+@patch("laughing_couscous.modeling.load_data.train_test_split")
 def test_load_data(mock_train_test_split, mock_load_iris):
     """Test load_data function."""
     # Given
