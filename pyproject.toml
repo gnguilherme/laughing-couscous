@@ -6,6 +6,7 @@ readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
     "fastapi>=0.115.4",
+    "uvicorn>=0.32.0",
 ]
 
 [project.optional-dependencies]
@@ -15,4 +16,9 @@ mlflow = [
 ]
 airflow = [
     "apache-airflow>=2.10.2",
+]
+
+[dependency-groups]
+dev = [
+    "ipykernel>=6.29.5",
 ]
