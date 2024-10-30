@@ -18,6 +18,7 @@ jobs:
         run: uv run pytest
   laugh:
     runs-on: ubuntu-latest
+    needs: build-and-test
     steps:
       - name: Laughing
-        run: echo "hehehehelp kkkkcry"
+        run: echo "hehehehelp kkkkcry Unit test works"
